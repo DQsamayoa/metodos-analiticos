@@ -23,7 +23,6 @@ El repositorio está pensado para mantener la siguiente organización
 
 ```
 .
-+-- LICENSE
 +-- README.md
 +-- python_scripts
 |   +-- get_papers.py
@@ -32,6 +31,8 @@ El repositorio está pensado para mantener la siguiente organización
 |   +-- uploadS3.R
 +-- databricks_scripts
 |   +-- 
++-- datos
+|   +--
 +-- Reporte
 |   +-- Reporte.Rmd
 |   +-- tex
@@ -42,4 +43,5 @@ donde:
 - **get_papers.py** Es el script que extrae los datos; id_arxiv, título, abstract, autor(es), fecha de creación de todos los artículos de Arxiv desde enero de 2000  hasta el el 2019. Estos archivos se guardan por categoría y año en formato *feather*
 - **get_cites.py** Realizá una búsqueda por cada id_arxiv en la web de INSPIRE y extrae la información de los artículos que han citado el artículo asociado al id_arxiv.
 - **uploadS3.R** Da formato de tablas a los archivos de `artículos` y `citas` para exportarlos a un formato `csv` y cargarlos en un bucket de S3.
+- **datos** Es la carpeta donde se van a guardar todos los archivos "intermedios" entre la ejecución de los scripts hasta cargar toda la información a AWS S3.
 - **Reporte.Rmd** Archvio en formato Rmarkdown que genera el reprote (entregable) final del proyecto.
