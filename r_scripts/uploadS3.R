@@ -23,6 +23,6 @@ categorias_path %>%
     datos %>% 
       write_csv(datos_file)
     
-    put_object(datos_file, object = paste0(categorias_path, ".csv"), bucket = cubeta,
+    put_object(datos_file, object = paste0(categoria, ".csv"), bucket = cubeta,
                multipart = TRUE, verbose = TRUE, show_progress = TRUE)
   })
